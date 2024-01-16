@@ -97,3 +97,29 @@ const students = [
         grades: 84
     }
 ]
+
+//& 1. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
+// const newListStudents = students.filter ((grades) => students.grades >= 70)
+/*const newListStudents = [];
+for (let i = 0; i < students.length; i++) {
+  const grades = students[i].grades;
+  console.log(grades)
+  if (grades >= 70) newListStudents.push(grades);
+}
+console.log(newListStudents)*/
+
+
+//& 2.Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
+
+const newListStudents = [];
+for (let i = 0; i < students.length; i++) {
+  const grades = students[i].grades;
+  const id = students[i].id;
+  console.log("vote: ", grades)
+  console.log("id: ", id)
+  if (grades >= 70 && id >= 120) newListStudents.push(students[i]);
+}
+console.log(newListStudents)
+
+//& 3.  dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo ES (Marco della Rovere => MARCO DELLA ROVERE);
+
