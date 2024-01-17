@@ -22,21 +22,15 @@ const guests = [
   'Maneskin'
 ];
 
-/* Struttura da replicare
-const segnaposti = [
-    {
-        tableName:
-        guestName:
-        guestPlace:
+const placeholder = guests.map( (guest, i) => {
+    return {
+        table: tableName,
+        name: guest,
+        place: i + 1
     }
-]
-*/
+});
 
-
-
-const placeholder = guests.map( guest => {
-    return guest
-})
+console.log(placeholder);
 
 
 
