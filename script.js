@@ -1,4 +1,4 @@
-//& SNACK 1
+//& SNACK 1 ✔
 /*
 Il Grande Gatsby ci ha chiesto di creare i segnaposto per il tavolo degli invitati alla sua mega festa vip.
 Ci ha lasciato il nome del tavolo  e la lista degli invitati in ordine di posto.
@@ -34,7 +34,7 @@ const placeholder = guests.map( (guest, i) => {
 
 
 
-//& SNACK 2
+//& SNACK 2 ✔
 /*
 Abbiamo un elenco degli studenti di una facoltà, identificati da id, Nome e somma totale dei loro voti di esame...
 Per preparare l'aula di un nuovo corso, dobbiamo svolgere una serie di operazioni
@@ -106,7 +106,7 @@ const plates = students.map(({name}) => name.toUpperCase())
 // console.log(newBestStudents);
 // console.log(plates);
 
-//& Snack 3
+//& Snack 3 ✘
 /* 
 Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: name e peso. Stampare in console la bici con peso minore utilizzando il destructuring
@@ -143,15 +143,18 @@ const bicycles =[
     },
 ]
 
-const lighterBike = bicycles.filter((bike, i) => {
-    const lighter = [i]
-    if (lighter < bike.weight) {
-        return true
-    }
+bicyclesWeight = bicycles.map(bike => {
+    return bike.weight
 })
+console.log(bicyclesWeight)
+
+lighter = (Math.min(...bicyclesWeight))
+console.log(lighter)
 
 
-//& Snack 4
+
+
+//& Snack 4 ✔
 /*
 Creare un array di oggetti di squadre di e-sports.
 Ogni squadra avrà diverse proprietà: nome, partite vinte, partite perse.
