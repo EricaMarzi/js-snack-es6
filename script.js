@@ -1,5 +1,5 @@
+//& SNACK 1
 /*
-SNACK 1
 Il Grande Gatsby ci ha chiesto di creare i segnaposto per il tavolo degli invitati alla sua mega festa vip.
 Ci ha lasciato il nome del tavolo  e la lista degli invitati in ordine di posto.
 
@@ -34,10 +34,8 @@ console.log(placeholder);
 
 
 
-
-
+//& SNACK 2
 /*
-SNACK 2
 Abbiamo un elenco degli studenti di una facoltà, identificati da id, Nome e somma totale dei loro voti di esame...
 Per preparare l'aula di un nuovo corso, dobbiamo svolgere una serie di operazioni
 1. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
@@ -92,28 +90,13 @@ const students = [
     }
 ]
 
-//& 1. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
-// const newListStudents = students.filter ((grades) => students.grades >= 70)
-/*const newListStudents = [];
-for (let i = 0; i < students.length; i++) {
-  const grades = students[i].grades;
-  console.log(grades)
-  if (grades >= 70) newListStudents.push(grades);
-}
-console.log(newListStudents)*/
 
+const bestStudents = students.filter(({ grades }) => grades >= 70);
+const newBestStudents = bestStudents.filter(({ id  }) => id > 120);
 
-//& 2.Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
+const plates = students.map(({name}) => name.toUpperCase())
 
-const newListStudents = [];
-for (let i = 0; i < students.length; i++) {
-  const grades = students[i].grades;
-  const id = students[i].id;
-  console.log("vote: ", grades)
-  console.log("id: ", id)
-  if (grades >= 70 && id >= 120) newListStudents.push(students[i]);
-}
-console.log(newListStudents)
-
-//& 3.  dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo ES (Marco della Rovere => MARCO DELLA ROVERE);
+console.log(bestStudents);
+console.log(newBestStudents);
+console.log(plates);
 
