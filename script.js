@@ -157,11 +157,11 @@ const bicycles =[
 let lighter = bicycles[0].weight;
 for(let i = 0; i < bicycles.length; i ++){
   if (bicycles[i].weight < lighter){
-     lighter = bicycles[i].weight;
+     lighter =`${bicycles[i].brand} : ${bicycles[i].weight}`;
   }
 }
 
-console.log('Lighter:', lighter);
+console.log(lighter);
 
 //& Snack 4 ✔
 /*
