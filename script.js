@@ -143,15 +143,17 @@ const bicycles =[
     },
 ]
 
-bicyclesWeight = bicycles.map(bike => {
-    return bike.weight
+//^ nuovo array solo con i pesi
+bicyclesWeight = bicycles.map(({weight, brand}) => {
+    return `${brand} weight: ${weight}`
 })
 console.log(bicyclesWeight)
 
+//^ trovo il peso più basso
 lighter = (Math.min(...bicyclesWeight))
 console.log(lighter)
 
-
+//TODO stampare in console bici più leggera
 
 
 //& Snack 4 ✔
