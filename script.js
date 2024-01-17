@@ -30,7 +30,7 @@ const placeholder = guests.map( (guest, i) => {
     }
 });
 
-console.log(placeholder);
+// console.log(placeholder);
 
 
 
@@ -92,13 +92,19 @@ const students = [
 
 
 const bestStudents = students.filter(({ grades }) => grades >= 70);
+/*const bestStudents = students.filter(({grades}) => {
+    if (grades >= 70) {
+        return true
+    }
+})
+console.log("here", bestStudent)*/
 const newBestStudents = bestStudents.filter(({ id  }) => id > 120);
 
 const plates = students.map(({name}) => name.toUpperCase())
 
-console.log(bestStudents);
-console.log(newBestStudents);
-console.log(plates);
+// console.log(bestStudents);
+// console.log(newBestStudents);
+// console.log(plates);
 
 //& Snack 3
 /* 
@@ -106,6 +112,43 @@ Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: name e peso. Stampare in console la bici con peso minore utilizzando il destructuring
 */
 
+const bicycles =[
+    {
+        brand: "Atala",
+        weight: 8
+    },
+    {
+        brand: "Perrone",
+        weight: 8.7
+    },
+    {
+        brand: "Bianchi",
+        weight: 6.9
+    },
+    {
+        brand: "Bold",
+        weight: 7.3
+    },
+    {
+        brand: "BMX",
+        weight: 9.5
+    },
+    {
+        brand: "Scott",
+        weight: 6.8
+    },
+    {
+        brand: "Officine Mattio",
+        weight: 7
+    },
+]
+
+const lighterBike = bicycles.filter((bike, i) => {
+    const lighter = [i]
+    if (lighter < bike.weight) {
+        return true
+    }
+})
 
 
 //& Snack 4
@@ -116,3 +159,47 @@ Il nome sarà l’unica proprietà da inventare voi, le altre saranno tutte sett
 Generare numeri random al posto degli 0 nelle proprietà punti fatti e falli subiti.
 Infine, usando il destructuring, creiamo un nuovo array i cui elementi contengono solo nomi e partite vinte e stampiamo tutto in console
 */
+
+const eSportTeams = [
+    {
+        name: "Fnatic",
+        win: 0,
+        lose: 0
+    },
+    {
+        name: "Cloud9",
+        win: 0,
+        lose: 0
+    },
+    {
+        name: "G2",
+        win: 0,
+        lose: 0
+    },
+    {
+        name: "SKT",
+        win: 0,
+        lose: 0
+    },
+    {
+        name: "TSM",
+        win: 0,
+        lose: 0
+    },
+]
+
+console.log("e-sports", eSportTeams)
+
+//^ nuovo array con win/lose random
+const lcs = eSportTeams.map((team) => {
+    const matches = {...team}
+    matches.win = Math.floor(Math.random() * (10 + 1))
+    matches.lose = Math.floor(Math.random() * (10 + 1))
+    return matches
+})
+console.log("LCS", lcs)
+
+//^ nuovo array solo win
+const eSportWins = lcs.map(element => `${element.name}: ${element.win}`)
+
+console.log("Win", eSportWins);
