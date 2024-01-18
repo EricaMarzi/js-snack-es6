@@ -154,12 +154,19 @@ const bicycles =[
 // console.log(lighter)
 
 //^ stampare in console bici più leggera
+// let lighter = bicycles[0].weight;
+// for(let i = 0; i < bicycles.length; i ++){
+    //   if (bicycles[i].weight < lighter){
+        //      lighter =`${bicycles[i].brand} : ${bicycles[i].weight}`;
+        //   }
+        // }
+        
 let lighter = bicycles[0].weight;
-for(let i = 0; i < bicycles.length; i ++){
-  if (bicycles[i].weight < lighter){
-     lighter =`${bicycles[i].brand} : ${bicycles[i].weight}`;
-  }
-}
+bicycles.forEach(({weight, brand}) => {
+    if (weight < lighter){
+        lighter =`${brand} : ${weight}`;
+    }
+})
 
 console.log(lighter);
 
@@ -212,6 +219,6 @@ const lcs = eSportTeams.map((team) => {
 console.log("LCS", lcs)
 
 //^ nuovo array solo win
-const eSportWins = lcs.map(element => `${element.name}: ${element.win}`)
+const eSportWins = lcs.map(({name, win}) => `${name}: ${win}`)
 
 console.log("Win", eSportWins);
